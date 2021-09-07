@@ -23,6 +23,10 @@ module.exports = {
                     presets: ['es2015'],
                     plugins: ['transform-object-assign']
                 }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     },

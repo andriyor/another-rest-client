@@ -107,23 +107,23 @@ function resource(client, parent, name, id, ctx) {
         const query = args.map(encodeUrl).join('&')
         if (query)
             url += '?' + query;
-        return client.axios.get(url);
+        return client.axios.get(url).then(({data}) => data);
     };
 
     self.post = (data) => {
-        return client.axios.post(self.url(), data);
+        return client.axios.post(self.url(), data).then(({data}) => data);
     };
 
     self.put = (data) => {
-        return client.axios.put(self.url(), data);
+        return client.axios.put(self.url(), data).then(({data}) => data);
     };
 
     self.patch = (data) => {
-        return client.axios.put(self.url(), data);
+        return client.axios.put(self.url(), data).then(({data}) => data);
     };
 
     self.delete = () => {
-        return client.axios.delete(self.url());
+        return client.axios.delete(self.url()).then(({data}) => data);
     };
     return self;
 }

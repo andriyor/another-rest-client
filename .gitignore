@@ -2,4 +2,8 @@ bower_components
 node_modules
 .idea
 npm-debug.log
-
+examples
+rest-client.js
+rest-client.js.map
+rest-client.min.js
+rest-client.min.js.map
